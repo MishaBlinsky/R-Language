@@ -7,25 +7,25 @@ print(x*y)
 print(x/y)
 
 # 1.8.2
-print(c(1:20)*rep(c(0,1),10))
-print(rep(2,20)**c(1:20))
-print(rep(10,5)**c(0:4))
+print(c(1:20) * rep(c(0,1), 10))
+print(rep(2,20) ** c(1:20))
+print(rep(10,5) ** c(0:4))
 
 # 1.8.3
-print(sum(rep(1,50)/(c(1:50)*c(2:51))))
-print(sum(rep(0.5,21)**c(0:20)))
-print(sum((rep(1,10)+c(0:9)*rep(3,10))/(rep(3,10)**c(0:9))))
+print(sum(rep(1,50) / (c(1:50) * c(2:51))))
+print(sum(rep(0.5,21) ** c(0:20)))
+print(sum((rep(1,10) + c(0:9) * rep(3,10)) / (rep(3,10) ** c(0:9))))
 
 # 1.8.4
 vec3 <- seq(3,27, by = 3)
 print(vec3)
-print(vec3[c(2,5,7,length(vec3)-1)])
-print(vec3[-length(vec3)+1])
+print(vec3[c(2, 5, 7, length(vec3) - 1)])
+print(vec3[-length(vec3) + 1])
 print(vec3[-6])
 print(vec3[100])
-print(vec3[-c(1,length(vec3))])
-print(vec3[c(vec3>4&vec3<10)])
-print(vec3[c(vec3<4|vec3>10)])
+print(vec3[-c(1, length(vec3))])
+print(vec3[c(vec3 > 4 & vec3 < 10)])
+print(vec3[c(vec3 < 4 | vec3 > 10)])
 
 # 1.9.4
 # 1.1. Выбрать значения var1, var2, var3 для case1. 
@@ -35,9 +35,9 @@ print(vec3[c(vec3<4|vec3>10)])
 # 1.5. Удалить строку case2.
 # 1.6. Значения второй колонки возвести в третью степень.
 df <- data.frame(var1=c(1,2,3), var2=c(4,5,6), var3=c(7,8,0), var4=c(9,10,11), row.names=c("case1", "case2", "case3"))
-df["case1",c("var1","var2","var3")]
-df["case3",c(df["case3",]<8)]
-names(df)[c(2,4)]
+df["case1", c("var1", "var2", "var3")]
+df["case3", c(df["case3",] < 8)]
+names(df)[c(2, 4)]
 df$Y = c(-10, 0, 11)
 df <- df[-2,]
 df$var2 = df$var2 ** 3
